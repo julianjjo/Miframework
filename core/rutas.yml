@@ -1,0 +1,15 @@
+inicio:
+    path: /
+    rol:  anonimo
+
+login:
+    path: /login
+    rol:  anonimo
+
+logout:
+    path: /logout
+    rol:  anonimo
+
+registro:
+    path: /registro
+    rol:  usuario
