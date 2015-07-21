@@ -1,8 +1,10 @@
 <?php
+  namespace Miframework;
+
   /**
    *
    */
-  class controladorbase
+  class Controladorbase
   {
     public function mensaje_flash($mensaje,$tipo,$ruta)
     {

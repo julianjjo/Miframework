@@ -1,0 +1,11 @@
+{
+    "name": "julianjjo/miframework",
+    "description": "Framework pequeño funcional",
+    "autoload": {
+        "psr-4": {"Miframework\\": "core/"}
+    },
+    "require": {
+        "heartsentwined/yaml": "1.*"
+    },
+    "minimum-stability": "dev"
+}

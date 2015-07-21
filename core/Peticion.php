@@ -1,11 +1,12 @@
 <?php
+  namespace Miframework;
 
   /**
    *
    */
-  class peticion
+  class Peticion
   {
-    use enrutador;
+    use Enrutador;
 
     function __construct($url)
     {

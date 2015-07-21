@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit>
+    <testsuites>
+        <testsuite name="ChillMain test suite">
+            <directory suffix="Test.php">./Pruebas</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+      <const name="_ambiente_" value="test"/>
+    </php>
+</phpunit>
