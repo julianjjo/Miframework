@@ -15,10 +15,10 @@
       $this->funcion_controlador = "null";
     }
 
-    public function buscar_ruta()
+    public function buscarRuta()
     {
       $url = $this->getUrl();
-      $rutas = new Miframework\Ruta();
+      $rutas = new Ruta();
       foreach ($rutas->getRutas() as $clave => $valor){
         foreach ($valor as $clave1 => $valor1){
           if($clave1==="path"&&$valor1===$url){
@@ -43,12 +43,12 @@
       return $this->rol;
     }
 
-    public function get_ruta_encontrada()
+    public function getRutaEncontrada()
     {
       return $this->ruta_encontrada;
     }
 
-    protected function get_nombre_ruta(){
+    protected function getNombreRuta(){
       $this->buscar_ruta();
       return $this->nombre_ruta;
     }

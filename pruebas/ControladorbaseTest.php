@@ -3,7 +3,7 @@
 
   class ControladorbaseTest extends PHPUnit_Framework_TestCase
   {
-    public function test_mensaje_flash()
+    public function testMensajeFlash()
     {
       $controladorbase = New ControladorBase();
       $respuesta = $controladorbase->mensaje_flash("El usuario ha sido guardado correctamente","success","inicio");

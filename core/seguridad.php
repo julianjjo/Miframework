@@ -1,14 +1,15 @@
 <?php
+  namespace Miframework;
+
   /**
    *
    */
-  class seguridad extends controladorbase
+  class Seguridad extends controladorbase
   {
     private $controladorbase;
     private $cedula;
     private $rol;
     private $modelo;
-    private $ingreso;
     private $nombre_funcion_segura;
 
     function __construct($controladorbase)
@@ -18,12 +19,12 @@
         session_start();
         $this->modelo = New modelo();
       }
-      $this->rutas = New rutas();
+      $this->rutas = New Ruta();
       $this->get_session();
       $this->nombre_funcion_segura = "error_pagina_no_encontrada_accion";
     }
 
-    public function get_session_cedula()
+    public function getSessionCedula()
     {
       if (_ambiente_==='prod') {
         $this->get_session();

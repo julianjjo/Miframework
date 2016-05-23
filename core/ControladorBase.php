@@ -6,7 +6,7 @@
    */
   class Controladorbase
   {
-    public function mensaje_flash($mensaje,$tipo,$ruta)
+    public function mensajeFlash($mensaje,$tipo,$ruta)
     {
       $_SESSION["Mensaje"] = $mensaje;
       $_SESSION["Tipo"] = $tipo;
@@ -16,7 +16,7 @@
       return $_SESSION["Mensaje"];
     }
 
-    public function eliminar_mensaje()
+    public function eliminarMensaje()
     {
       unset($_SESSION["Mensaje"]);
       unset($_SESSION["Tipo"]);

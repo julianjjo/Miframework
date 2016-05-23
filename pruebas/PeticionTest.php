@@ -10,7 +10,7 @@
       $this->url = "/caracterizacion_usuarios/usuario/registro";
     }
 
-    public function test_ruta_no_encontrada()
+    public function testRutaNoEncontrada()
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=1";
       $peticion = New Peticion($url);
@@ -18,14 +18,14 @@
       $this->assertFalse($respuesta, "esta ruta no deberia encontrarla");
     }
 
-    public function test_ruta_encontrada()
+    public function testRutaEncontrada()
     {
       $peticion = New Peticion($this->url);
       $respuesta = $peticion->buscar_ruta();
       $this->assertTrue($respuesta, "esta ruta deberia encontrarla");
     }
 
-    public function test_get_rol_anonimo()
+    public function testGetRolAnonimo()
     {
       $url = "/caracterizacion_usuarios/";
       $peticion = New Peticion($url);
@@ -33,7 +33,7 @@
       $this->assertEquals("anonimo", $respuesta, "deberia tener rol anonimo");
     }
 
-    public function test_get_rol_usuario()
+    public function testGetRolUsuario()
     {
       $url = "/caracterizacion_usuarios/usuario/registro";
       $peticion = New Peticion($url);
@@ -41,7 +41,7 @@
       $this->assertEquals("usuario", $respuesta, "deberia tener rol usuario");
     }
 
-    public function test_get_rol_admin()
+    public function testGetRolAdmin()
     {
       $url = "/caracterizacion_usuarios/admin";
       $peticion = New Peticion($url);
@@ -49,7 +49,7 @@
       $this->assertEquals("admin", $respuesta, "deberia tener rol admin");
     }
 
-    public function test_peticion_get_1()
+    public function testPeticionGet1()
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=1&funciona=si";
       $peticion = New Peticion($url);
@@ -61,7 +61,7 @@
       $this->assertEquals($get, $respuesta, "deberia responder un arreglo con la peticion get id=1 funciona=si");
     }
 
-    public function test_peticion_get_2()
+    public function testPeticionGet2()
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=2&funciona=no";
       $peticion = New Peticion($url);
@@ -73,7 +73,7 @@
       $this->assertEquals($get, $respuesta, "deberia responder un arreglo con la peticion get id=2 funciona=no");
     }
 
-    public function test_peticion_get_3()
+    public function testPeticionGet3()
     {
       $url = "/caracterizacion_usuarios/admin/usuario?funciona=si";
       $peticion = New Peticion($url);
@@ -84,7 +84,7 @@
       $this->assertEquals($get, $respuesta, "deberia responder un arreglo con la peticion get funciona=si");
     }
 
-    public function test_peticion_get_sin_datos()
+    public function testPeticionGetSinDatos()
     {
       $url = "/caracterizacion_usuarios/admin/usuario";
       $peticion = New Peticion($url);

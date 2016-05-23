@@ -24,7 +24,7 @@
 
 
 
-    public function peticion_get()
+    public function peticionGet()
     {
       $url = explode('?', $this->peticion);
       if(!empty($url[1])){
