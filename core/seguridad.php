@@ -15,10 +15,6 @@
     function __construct($controladorbase)
     {
       $this->controladorbase = $controladorbase;
-      if (_ambiente_==='prod') {
-        session_start();
-        $this->modelo = New modelo();
-      }
       $this->rutas = New Ruta();
       $this->get_session();
       $this->nombre_funcion_segura = "error_pagina_no_encontrada_accion";
