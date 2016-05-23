@@ -18,7 +18,7 @@
     public function buscar_ruta()
     {
       $url = $this->getUrl();
-      $rutas = new Rutas();
+      $rutas = new Ruta();
       foreach ($rutas->getRutas() as $clave => $valor){
         foreach ($valor as $clave1 => $valor1){
           if($clave1=="path"&&$valor1==$url){
