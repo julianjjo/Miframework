@@ -10,7 +10,7 @@
     {
       $_SESSION["Mensaje"] = $mensaje;
       $_SESSION["Tipo"] = $tipo;
-      if (_ambiente_=='prod') {
+      if (_ambiente_==='prod') {
         header("Location: ".$this->rutas->get_ruta_por_nombre("mensaje_flash")."?ruta=".$ruta);
       }
       return $_SESSION["Mensaje"];

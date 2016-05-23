@@ -18,19 +18,19 @@
     public function buscar_ruta()
     {
       $url = $this->getUrl();
-      $rutas = new Ruta();
+      $rutas = new Miframework\Ruta();
       foreach ($rutas->getRutas() as $clave => $valor){
         foreach ($valor as $clave1 => $valor1){
-          if($clave1=="path"&&$valor1==$url){
+          if($clave1==="path"&&$valor1===$url){
             $this->nombre_ruta = $clave;
             $this->ruta_encontrada = true;
           }
-          elseif($clave1=="rol"&&$this->ruta_encontrada==true){
+          elseif($clave1==="rol"&&$this->ruta_encontrada===true){
             $this->rol=$valor1;
             break;
           }
         }
-        if($this->ruta_encontrada==true){
+        if($this->ruta_encontrada===true){
           break;
         }
       }
