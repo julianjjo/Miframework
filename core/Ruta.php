@@ -65,24 +65,4 @@
     }
   }
 
-
-
-
-
-  //   public function get_ruta_por_nombre($nombre)
-  //   {
-  //     $rutas =  $this->rutas;
-  //     foreach ($rutas as $clave => $valor){
-  //       if($clave==$nombre){
-  //         $this->nombre_ruta = $clave;
-  //         foreach ($valor as $clave1 => $valor1){
-  //           if($clave1=="path"){
-  //             return "/caracterizacion_usuarios".$valor1;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-
-
 ?>
