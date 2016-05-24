@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b819a293baf43602480b133ac5605810",
+    "hash": "22ead64aa6288b96233a0169ff44801e",
+    "content-hash": "eca32e174dbbc912cb9cfbee103f5f0d",
     "packages": [
         {
             "name": "heartsentwined/arg-validator",

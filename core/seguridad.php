@@ -28,7 +28,7 @@
       return $this->cedula;
     }
 
-    public function get_session_rol()
+    public function getSessionRol()
     {
       if (_ambiente_==='prod') {
         $this->get_session();
@@ -39,7 +39,7 @@
       return $this->rol;
     }
 
-    private function set_session()
+    private function setSession()
     {
       if (_ambiente_==='prod') {
         $_SESSION["cedula"]=$this->cedula;
@@ -47,7 +47,7 @@
       }
     }
 
-    private function get_session()
+    private function getSession()
     {
       if (_ambiente_==='prod') {
         $this->cedula = $_SESSION["cedula"];
@@ -55,17 +55,17 @@
       }
     }
 
-    public function set_session_cedula($cedula){
+    public function setSessionCedula($cedula){
       $this->cedula = $cedula;
       $this->set_session();
     }
 
-    public function set_session_rol($rol){
+    public function setSessionRol($rol){
       $this->rol = $rol;
       $this->set_session();
     }
 
-    public function firewall_usuario()
+    public function firewallUsuario()
     {
       $ingreso = $this->validarsession();
       $rol_session = $this->get_session_rol();
@@ -127,13 +127,13 @@
       }
     }
 
-    public function get_nombre_funcion_segura()
+    public function getNombreFuncionSegura()
     {
       $this->firewall_usuario();
       return $this->nombre_funcion_segura;
     }
 
-    public function validarsession(){
+    public function validarSession(){
       if (_ambiente_==='test') {
         if ($this->cedula!='') {
           $cedula = "12345";
