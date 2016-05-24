@@ -39,22 +39,6 @@
       return $this->rol;
     }
 
-    private function setSession()
-    {
-      if (_ambiente_==='prod') {
-        $_SESSION["cedula"]=$this->cedula;
-        $_SESSION["rol"]=$this->rol;
-      }
-    }
-
-    private function getSession()
-    {
-      if (_ambiente_==='prod') {
-        $this->cedula = $_SESSION["cedula"];
-        $this->rol = $_SESSION["rol"];
-      }
-    }
-
     public function setSessionCedula($cedula){
       $this->cedula = $cedula;
       $this->set_session();
