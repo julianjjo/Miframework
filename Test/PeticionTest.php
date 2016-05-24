@@ -14,14 +14,14 @@
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=1";
       $peticion = New Peticion($url);
-      $respuesta = $peticion->buscar_ruta();
+      $respuesta = $peticion->buscarRuta();
       $this->assertFalse($respuesta, "esta ruta no deberia encontrarla");
     }
 
     public function testRutaEncontrada()
     {
       $peticion = New Peticion($this->url);
-      $respuesta = $peticion->buscar_ruta();
+      $respuesta = $peticion->buscarRuta();
       $this->assertTrue($respuesta, "esta ruta deberia encontrarla");
     }
 
@@ -53,7 +53,7 @@
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=1&funciona=si";
       $peticion = New Peticion($url);
-      $respuesta = $peticion->peticion_get();
+      $respuesta = $peticion->peticionGet();
       $get = array(
           "id" => "1",
           "funciona" => "si",
@@ -65,7 +65,7 @@
     {
       $url = "/caracterizacion_usuarios/admin/usuario?id=2&funciona=no";
       $peticion = New Peticion($url);
-      $respuesta = $peticion->peticion_get();
+      $respuesta = $peticion->peticionGet();
       $get = array(
           "id" => "2",
           "funciona" => "no",
@@ -77,7 +77,7 @@
     {
       $url = "/caracterizacion_usuarios/admin/usuario?funciona=si";
       $peticion = New Peticion($url);
-      $respuesta = $peticion->peticion_get();
+      $respuesta = $peticion->peticionGet();
       $get = array(
           "funciona" => "si",
       );
@@ -88,7 +88,7 @@
     {
       $url = "/caracterizacion_usuarios/admin/usuario";
       $peticion = New Peticion($url);
-      $respuesta = $peticion->peticion_get();
+      $respuesta = $peticion->peticionGet();
       $get = array();
       $this->assertEquals($get, $respuesta, "deberia responder un arreglo vacio");
     }

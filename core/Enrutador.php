@@ -39,7 +39,7 @@
 
     public function getRol()
     {
-      $this->buscar_ruta();
+      $this->buscarRuta();
       return $this->rol;
     }
 
@@ -49,7 +49,7 @@
     }
 
     protected function getNombreRuta(){
-      $this->buscar_ruta();
+      $this->buscarRuta();
       return $this->nombre_ruta;
     }
 

@@ -63,6 +63,11 @@
                       "asuntos_dependencia" => array ( "path" => "/usuario/dependencia/asuntos", "rol" => "anonimo" )
                     );
     }
+    public function getRutaPorNombre($nombre)
+    {
+      $rutas = $this->getRutas();
+      return $rutas[$nombre]["path"];
+    }
   }
 
 ?>

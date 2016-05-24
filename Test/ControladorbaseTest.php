@@ -6,7 +6,7 @@
     public function testMensajeFlash()
     {
       $controladorbase = New ControladorBase();
-      $respuesta = $controladorbase->mensaje_flash("El usuario ha sido guardado correctamente","success","inicio");
+      $respuesta = $controladorbase->mensajeFlash("El usuario ha sido guardado correctamente","success","inicio");
       $this->assertEquals("El usuario ha sido guardado correctamente",$respuesta, "la funcion deveria retornar true");
     }
   }
